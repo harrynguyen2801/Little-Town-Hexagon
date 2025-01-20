@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     int score;
 
-    public float fadeTime = 1f;
+    public float fadeTime = .25f;
     public bool isTutorial = false;
 
     public int[,,] RCPosYellowHex = new int[6, 3, 2]

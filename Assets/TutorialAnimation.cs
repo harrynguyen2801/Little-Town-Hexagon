@@ -40,7 +40,15 @@ public class TutorialAnimation : MonoBehaviour
 
     private IEnumerator EAnimationMove(int nameStep)
     {
-        yield return new WaitForSeconds(1.5f);
+        if (nameStep < 3)
+        {
+            yield return new WaitForSeconds(.25f);
+
+        }
+        else
+        {
+            yield return new WaitForSeconds(1.25f);
+        }
         GameManager.Instance.HiddenHandTut(true);
         nameStep++;
         myAnimator.Play($"hand{nameStep}Move",0 ,0.0f);
